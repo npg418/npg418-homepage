@@ -7,5 +7,6 @@
     },
     "[typescriptreact]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
-    }
+    },
+    "deno.config": "./deno.json"
 }
