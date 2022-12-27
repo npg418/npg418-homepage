@@ -14,10 +14,10 @@ export default {
                         transform: 'translateY(0)',
                         opacity: 1,
                     },
-                }
+                },
             },
             animation: {
-                'fade-up': 'fade-up 600ms ease-out 0ms forwards'
+                'fade-up': 'fade-up 600ms ease-out 0ms forwards',
             },
         },
     },

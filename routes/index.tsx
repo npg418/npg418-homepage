@@ -1,5 +1,4 @@
 import { Head } from '$fresh/runtime.ts';
-import FadeUp from '../islands/FadeUp.tsx';
 
 export default function Home() {
     return (
