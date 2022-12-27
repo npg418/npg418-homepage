@@ -5,10 +5,8 @@
 import config from './deno.json' assert { type: 'json' };
 import * as $0 from './routes/_app.tsx';
 import * as $1 from './routes/index.tsx';
-import * as $$0 from './islands/FadeUp.tsx';
-import * as $$1 from './islands/FadeUpSection.tsx';
-import * as $$2 from './islands/Header.tsx';
-import * as $$3 from './islands/ThemeToggleButton.tsx';
+import * as $$0 from './islands/Header.tsx';
+import * as $$1 from './islands/ThemeToggleButton.tsx';
 
 const manifest = {
     routes: {
@@ -16,10 +14,8 @@ const manifest = {
         './routes/index.tsx': $1,
     },
     islands: {
-        './islands/FadeUp.tsx': $$0,
-        './islands/FadeUpSection.tsx': $$1,
-        './islands/Header.tsx': $$2,
-        './islands/ThemeToggleButton.tsx': $$3,
+        './islands/Header.tsx': $$0,
+        './islands/ThemeToggleButton.tsx': $$1,
     },
     baseUrl: import.meta.url,
     config,
