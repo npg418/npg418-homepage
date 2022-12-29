@@ -22,3 +22,5 @@ export default {
         },
     },
 } as Omit<Configuration, 'mode' | 'sheet'>;
+
+export const configURL = import.meta.url;
