@@ -18,5 +18,5 @@ export const toggleColorMode = () => {
         : 'light';
 };
 
-export const useColorModeValue = <T,>(light: T, dark: T) =>
+export const useColorModeValue = <L, D>(light: L, dark: D) =>
     colorMode.value === 'dark' ? dark : light;

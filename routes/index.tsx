@@ -16,12 +16,14 @@ export default function Home() {
                 </h1>
             </div>
             <section class='mx-5'>
-                <h2 class='text-4xl font-bold p-3 before::(h-full w-1 rounded-full bg-gray-500)'>
+                <h2
+                    class={`${'section-h'}`}
+                >
                     {hour >= 4 && hour < 11
-                        ? 'おはよう!'
+                        ? 'おはよう! '
                         : (hour >= 11 && hour < 17
-                            ? 'こんにちは!'
-                            : 'こんばんは!')}
+                            ? 'こんにちは! '
+                            : 'こんばんは! ')}
                     {hour}時だよ!
                 </h2>
                 <p></p>
