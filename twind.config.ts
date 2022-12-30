@@ -2,6 +2,11 @@ import { Configuration } from 'twind';
 
 export default {
     darkMode: 'class',
+    plugins: {
+        content: (parts) => ({ content: `"${parts[0] || ''}"` }),
+        'section-h':
+            `text-4xl font-bold p-3 flex before::(content h-10 w-1 mr-2 rounded bg-gray-500) not-hover:before::invisible`,
+    },
     theme: {
         extend: {
             keyframes: {
