@@ -10,14 +10,14 @@ export default function App({ Component }: AppProps) {
                     dangerouslySetInnerHTML={{
                         __html: `
                             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                                document.documentElement.classList.add('dark')
+                                document.documentElement.classList.add('dark');
                             } else {
-                                document.documentElement.classList.remove('dark')
+                                document.documentElement.classList.remove('dark');
                             }`,
                     }}
                 />
             </Head>
-            <body class='bg(gray-100 dark:gray-800) dark:text-gray-100'>
+            <body class='bg-gray-100 dark:(bg-gray-800 text-gray-100)'>
                 <Header />
                 <main class='mx-auto max-w-screen-lg p-4'>
                     <Component />

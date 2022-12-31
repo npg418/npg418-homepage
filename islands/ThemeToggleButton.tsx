@@ -1,5 +1,5 @@
 import { BsMoonStars, BsSun } from 'react-icons/bs';
-import { toggleColorMode, useColorModeValue } from '@/utils/colormode.tsx';
+import { toggleColorMode, useColorModeValue } from '@/utils/colormode.ts';
 
 export default function ThemeToggleButton(
     { className = '' }: { className?: string },
