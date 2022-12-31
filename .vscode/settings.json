@@ -8,5 +8,8 @@
     "[typescriptreact]": {
         "editor.defaultFormatter": "denoland.vscode-deno"
     },
-    "deno.config": "./deno.json"
+    "deno.config": "./deno.json",
+    "editor.quickSuggestions": {
+        "strings": "on"
+    }
 }
