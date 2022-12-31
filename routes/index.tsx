@@ -15,9 +15,9 @@ export default function Home() {
                     <span>I'm NPG418</span>
                 </h1>
             </div>
-            <section class='mx-5'>
+            <section class='mx-5 p-3'>
                 <h2
-                    class={`${'section-h'}`}
+                    class={`${'section-h'} border-b`}
                 >
                     {hour >= 4 && hour < 11
                         ? 'おはよう! '
@@ -26,7 +26,17 @@ export default function Home() {
                             : 'こんばんは! ')}
                     {hour}時だよ!
                 </h2>
-                <p></p>
+                <p class='my-2.5 mx-5 text-lg'>
+                    NPG418です。はい。<br />
+                    作ったものとか置いてこうと思います。よろ。<br />
+                    何かあったらTwitter:{' '}
+                    <a
+                        href='https://twitter.com/npg418'
+                        class='text-blue(900 dark:300)) hover:text-underline'
+                    >
+                        @npg418
+                    </a>とかDiscord: npg418#3201までどうぞ。
+                </p>
             </section>
         </>
     );
