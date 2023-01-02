@@ -10,7 +10,7 @@ export default function Home() {
                 <link rel='preload' href='npg418.png' as='image/png' />
             </Head>
             <div class='flex items-center mb-32'>
-                <img class='w-1/2' src='npg418.png' />
+                <img class='w-1/2' src='npg418.png' alt='NPG418' />
                 <h1 class='font-extrabold text-7xl ml-4 flex flex-col'>
                     <span class='text-green-500'>Hello!</span>
                     <span>I'm NPG418</span>
