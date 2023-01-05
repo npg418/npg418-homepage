@@ -11,5 +11,8 @@
     "deno.config": "./deno.json",
     "editor.quickSuggestions": {
         "strings": "on"
+    },
+    "[graphql]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

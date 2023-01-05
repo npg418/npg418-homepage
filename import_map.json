@@ -11,6 +11,9 @@
         "react-icons/bs": "https://deno.land/x/react_icons@0.2.3/bs/mod.ts",
         "react-icons/gr": "https://deno.land/x/react_icons@0.2.3/gr/mod.ts",
         "react-icons/vsc": "https://deno.land/x/react_icons@0.2.3/vsc/mod.ts",
+        "dotenv/": "https://deno.land/std@0.170.0/dotenv/",
+        "graphql-request": "https://deno.land/x/graphql_request@v4.1.0/mod.ts",
+        "zod": "https://deno.land/x/zod@v3.20.2/mod.ts",
         "@/": "./"
     }
 }
