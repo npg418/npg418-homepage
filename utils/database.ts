@@ -37,5 +37,5 @@ export const getData = async (table: keyof typeof database) => {
         }
     }`);
 
-    return response[`${table}Collection`].edges.map(v => v.node);
+    return response[`${table}Collection`].edges.map(v => database[table].parse(v.node));
 };
