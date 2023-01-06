@@ -40,15 +40,13 @@ const toObjString = (obj: Record<string, unknown>): string => {
     }).map((entries) => entries.join(': ')).join(' ') + '} ';
 };
 
-export const getData = async (
-    table: Table,
+export const getData = async <T extends Table>(
+    table: T,
     opt?: GetOption<typeof table>,
 ) => {
+    type Response = z.infer<typeof database[T]>;
     const response = await client.request<
-        GraphqlResponse<
-            z.infer<typeof database[typeof table]>,
-            `${typeof table}Collection`
-        >
+        GraphqlResponse<Response, `${T}Collection`>
     >(gql`{
         ${table}Collection${(!opt || !opt.filter ||
             Object.values(opt.filter).filter(Boolean).length === 0)
@@ -65,5 +63,5 @@ export const getData = async (
 
     return response[`${table}Collection`].edges.map((v) =>
         database[table].parse(v.node)
-    );
+    ) as Response[];
 };
