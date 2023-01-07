@@ -48,11 +48,12 @@ export const getData = async <T extends Table>(
     const response = await client.request<
         GraphqlResponse<Response, `${T}Collection`>
     >(gql`{
-        ${table}Collection${(!opt || !opt.filter ||
-            Object.values(opt.filter).filter(Boolean).length === 0)
+        ${table}Collection${
+        (!opt || !opt.filter ||
+                Object.values(opt.filter).filter(Boolean).length === 0)
             ? ''
             : `(filter: ${toObjString(opt.filter)})`
-        } {
+    } {
             edges {
                 node {
                     ${Object.keys(database[table].shape).join(' ')}
