@@ -1,5 +1,6 @@
 {
     "imports": {
+        "$std/": "https://deno.land/std@0.171.0/",
         "$fresh/": "https://deno.land/x/fresh@1.1.2/",
         "preact": "https://esm.sh/preact@10.11.0",
         "preact/": "https://esm.sh/preact@10.11.0/",
@@ -15,6 +16,7 @@
         "graphql-request": "https://deno.land/x/graphql_request@v4.1.0/mod.ts",
         "zod": "https://deno.land/x/zod@v3.20.2/mod.ts",
         "markdown": "https://deno.land/x/markdown@v2.0.0/mod.ts",
+        "cookies": "https://deno.land/x/cookies@1.0.0/mod.ts",
         "@/": "./"
     }
 }

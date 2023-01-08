@@ -1,6 +1,7 @@
 import { AppProps } from '$fresh/src/server/types.ts';
 import { Head } from '$fresh/runtime.ts';
 import Header from '@/islands/Header.tsx';
+import { useColorModeValue } from '@/utils/colormode.ts';
 
 export default function App({ Component }: AppProps) {
     return (
@@ -8,12 +9,9 @@ export default function App({ Component }: AppProps) {
             <Head>
                 <script
                     dangerouslySetInnerHTML={{
-                        __html: `
-                            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                                document.documentElement.classList.add('dark');
-                            } else {
-                                document.documentElement.classList.remove('dark');
-                            }`,
+                        __html: `document.documentElement.classList.${
+                            useColorModeValue('remove', 'add')
+                        }('dark');`,
                     }}
                 />
             </Head>
