@@ -1,6 +1,6 @@
 import { getCookies, setCookie } from '$std/http/cookie.ts';
 import { MiddlewareHandlerContext } from '$fresh/server.ts';
-import { ColorMode, colorMode } from '@/utils/colormode.ts';
+import { ColorMode, colorMode, expires } from '@/utils/colormode.ts';
 
 export async function handler(
     req: Request,
@@ -12,6 +12,7 @@ export async function handler(
     setCookie(res.headers, {
         name: 'theme',
         value: colorMode.value,
+        expires: expires()
     });
     return res;
 }

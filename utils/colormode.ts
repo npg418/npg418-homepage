@@ -9,13 +9,19 @@ export const colorMode = signal<ColorMode | undefined>(
         : undefined,
 );
 
+export const expires = () => {
+    const date = new Date();
+    date.setFullYear(date.getFullYear() + 10);
+    return date;
+};
+
 export const toggleColorMode = () => {
     let next: ColorMode = 'light';
     document.cookie = document.cookie.replace(
         /theme=(light|dark);?/,
-        (full: string, current: string) => {
+        (_: string, current: string) => {
             next = current === 'light' ? 'dark' : 'light';
-            return `theme=${next}${full.endsWith(';') ? ';' : ''}`;
+            return `theme=${next}; expires=${expires().toUTCString()}`;
         },
     );
     document.documentElement.classList.toggle('dark');
