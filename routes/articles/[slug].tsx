@@ -1,10 +1,11 @@
-import { Handlers, PageProps } from '$fresh/server.ts';
+import { Handlers } from '$fresh/server.ts';
 import { Head } from '$fresh/runtime.ts';
 import { Article } from '@/types/schema.ts';
 import { getData } from '@/utils/database.ts';
-import Markdown from '../../components/Markdown.tsx';
+import Markdown from '@/components/Markdown.tsx';
+import { InferPageProps } from '@/types/util.ts';
 
-export const handler: Handlers<Article | null> = {
+export const handler: Handlers<Article> = {
     async GET(_, ctx) {
         const { slug } = ctx.params;
         try {
@@ -13,16 +14,12 @@ export const handler: Handlers<Article | null> = {
             }))[0];
             return ctx.render(article);
         } catch (error) {
-            return ctx.render(null);
+            return ctx.renderNotFound();
         }
     },
 };
 
-export default function ArticlePage({ data }: PageProps<Article | null>) {
-    if (!data) {
-        return <></>;
-    }
-
+export default function ArticlePage({ data }: InferPageProps<typeof handler>) {
     return (
         <>
             <Head>
