@@ -20,6 +20,10 @@ export const handler: Handlers<Article> = {
 };
 
 export default function ArticlePage({ data }: InferPageProps<typeof handler>) {
+    if (!data) {
+        return <></>;
+    }
+
     return (
         <>
             <Head>

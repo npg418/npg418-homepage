@@ -11,5 +11,5 @@ export type Replace<T, R extends Partial<Record<keyof T, unknown>>> =
     & R;
 
 export type InferPageProps<T extends Handlers> = T extends Handlers<infer U>
-    ? PageProps<U>
+    ? PageProps<U | undefined>
     : never;
