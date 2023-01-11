@@ -1,10 +1,9 @@
-import { Configuration } from 'twind';
+import { defineConfig } from "@twind/core";
+import tailwindPreset from '@twind/preset-tailwind';
 
-export default {
+export default defineConfig({
+    presets: [tailwindPreset()],
     darkMode: 'class',
-    plugins: {
-        content: (parts) => ({ content: `"${parts[0] || ''}"` }),
-    },
     theme: {
         extend: {
             keyframes: {
@@ -24,11 +23,6 @@ export default {
             },
         },
     },
-    preflight: {
-        '.dark': {
-            colorScheme: 'dark',
-        },
-    },
-} as Omit<Configuration, 'mode' | 'sheet'>;
+});
 
 export const configURL = import.meta.url;

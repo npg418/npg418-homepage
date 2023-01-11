@@ -1,12 +1,12 @@
 import ThemeToggleButton from '@/islands/ThemeToggleButton.tsx';
 import { useState } from 'preact/hooks';
-import { tw } from 'twind';
+import { tx } from '@twind/core';
 import { VscGithubAlt, VscTwitter } from 'react-icons/vsc';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const hamburgerRow = (onOpen: string, c?: string) =>
-        tw`w-6 h-0.5 bg-current rounded-full transition-transform duration-300 not-last-child:mb-2 ${c} ${
+        tx`w-6 h-0.5 bg-current rounded-full transition-transform duration-300 not-last-child:mb-2 ${c} ${
             isOpen ? onOpen : ''
         }`;
 
@@ -19,14 +19,14 @@ export default function Header() {
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         <span
-                            class={hamburgerRow(tw`translate-y-2.5 rotate-45`)}
+                            class={hamburgerRow(tx`translate-y-2.5 rotate-45`)}
                         />
                         <span
-                            class={hamburgerRow(tw`scale-0`, tw`origin-left`)}
+                            class={hamburgerRow(tx`scale-0`, tx`origin-left`)}
                         />
                         <span
                             class={hamburgerRow(
-                                tw`-translate-y-2.5 -rotate-45`,
+                                tx`-translate-y-2.5 -rotate-45`,
                             )}
                         />
                     </button>
@@ -42,12 +42,12 @@ export default function Header() {
                 }`}
             >
                 <div class='mx-auto max-w-screen-lg p-4'>
-                    <ul class='flex list-none text-xl ml-2 children:(not-first-child:(border-l-1 pl-1) pr-1 hover:text-underline)'>
+                    <ul class='flex text-xl ml-2 children:(not-first-child:(border-l-1 pl-1) pr-1)'>
                         <li>
                             <a
                                 href='https://github.com/npg418'
                                 target='_blank'
-                                class='flex items-center'
+                                class='flex items-center text-current'
                             >
                                 <VscGithubAlt class='mr-1' /> GitHub
                             </a>

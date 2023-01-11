@@ -7,14 +7,11 @@
 import { start } from '$fresh/server.ts';
 import manifest from '@/fresh.gen.ts';
 
-import twindPlugin from '$fresh/plugins/twind.ts';
-import twindConfig, { configURL } from '@/twind.config.ts';
+import freshwind from 'freshwind/plugin.ts';
+import config, { configURL } from '@/twind.config.ts';
 
 await start(manifest, {
-    plugins: [twindPlugin({
-        selfURL: configURL,
-        ...twindConfig,
-    })],
+    plugins: [freshwind(config, configURL)],
     port: 3000,
     render: (ctx, render) => {
         ctx.lang = 'ja';

@@ -4,7 +4,6 @@ import { Article } from '@/types/schema.ts';
 import { getData } from '@/utils/database.ts';
 import { InferPageProps } from '@/types/util.ts';
 import { marked } from 'marked';
-import { tw } from 'twind';
 
 export const handler: Handlers<Article> = {
     async GET(_, ctx) {
@@ -27,13 +26,11 @@ marked.use({
                 /\s+/g,
                 '-',
             );
-            return `<h${level} id="${id}" class="text-${
-                7 - level
-            }xl">${text}</h${level}>`;
+            return `<h${level} id="${id}">${text}</h${level}>`;
         },
         link(href, title, text) {
             if (href === null) return text;
-            return `<a href="href" class="${tw`text-blue(900 dark:300)) hover:text-underline`}" ${
+            return `<a href="href" ${
                 title ? `title="${title}"` : ''
             }>${text}</a>`;
         },
