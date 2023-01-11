@@ -2,8 +2,9 @@ import { Handlers } from '$fresh/server.ts';
 import { Head } from '$fresh/runtime.ts';
 import { Article } from '@/types/schema.ts';
 import { getData } from '@/utils/database.ts';
-import Markdown from '@/components/Markdown.tsx';
 import { InferPageProps } from '@/types/util.ts';
+import { marked } from 'marked';
+import { tw } from 'twind';
 
 export const handler: Handlers<Article> = {
     async GET(_, ctx) {
@@ -19,6 +20,26 @@ export const handler: Handlers<Article> = {
     },
 };
 
+marked.use({
+    renderer: {
+        heading(text, level) {
+            const id = String(text).trim().toLocaleLowerCase().replace(
+                /\s+/g,
+                '-',
+            );
+            return `<h${level} id="${id}" class="text-${
+                7 - level
+            }xl">${text}</h${level}>`;
+        },
+        link(href, title, text) {
+            if (href === null) return text;
+            return `<a href="href" class="${tw`text-blue(900 dark:300)) hover:text-underline`}" ${
+                title ? `title="${title}"` : ''
+            }>${text}</a>`;
+        },
+    },
+});
+
 export default function ArticlePage({ data }: InferPageProps<typeof handler>) {
     if (!data) {
         return <></>;
@@ -29,7 +50,10 @@ export default function ArticlePage({ data }: InferPageProps<typeof handler>) {
             <Head>
                 <title>{data.title} - NPG418</title>
             </Head>
-            <Markdown>{data.body}</Markdown>
+            <article
+                class='mt-10'
+                dangerouslySetInnerHTML={{ __html: marked(data.body) }}
+            />
         </>
     );
 }
