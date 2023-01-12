@@ -12,7 +12,8 @@ export async function handler(
     setCookie(res.headers, {
         name: 'theme',
         value: colorMode.value,
-        expires: expires()
+        expires: expires(),
+        path: '/'
     });
     return res;
 }

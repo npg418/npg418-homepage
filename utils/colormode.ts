@@ -21,7 +21,7 @@ export const toggleColorMode = () => {
         /theme=(light|dark);?/,
         (_: string, current: string) => {
             next = current === 'light' ? 'dark' : 'light';
-            return `theme=${next}; expires=${expires().toUTCString()}`;
+            return `theme=${next}; expires=${expires().toUTCString()}; path=/`;
         },
     );
     document.documentElement.classList.toggle('dark');
