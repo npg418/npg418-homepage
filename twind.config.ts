@@ -4,6 +4,10 @@ import tailwindPreset from '@twind/preset-tailwind';
 export default defineConfig({
     presets: [tailwindPreset()],
     darkMode: 'class',
+    rules: [
+        ['title', 'text-7xl font-extrabold'],
+        ['section-h', 'text-6xl font-bold border-b p-3']
+    ],
     theme: {
         extend: {
             keyframes: {
