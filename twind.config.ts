@@ -5,18 +5,14 @@ import autoprefixPreset from '@twind/preset-autoprefix';
 export default defineConfig({
     presets: [tailwindPreset(), autoprefixPreset()],
     darkMode: 'class',
-    rules: [
-        ['title', 'text-7xl font-extrabold'],
-        ['section-h', 'text-6xl font-bold border-b p-3']
-    ],
     variants: [
         ['not-', ({ $$ }) => `&:not(:${$$})`]
     ],
-    preflight: {
-        '.dark': {
-            colorScheme: 'dark'
-        }
-    },
+    rules: [
+        ['dark', {
+            colorScheme: 'dark',
+        }]
+    ],
     theme: {
         extend: {
             keyframes: {
