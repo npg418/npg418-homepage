@@ -1,13 +1,22 @@
 import { defineConfig } from "@twind/core";
 import tailwindPreset from '@twind/preset-tailwind';
+import autoprefixPreset from '@twind/preset-autoprefix';
 
 export default defineConfig({
-    presets: [tailwindPreset()],
+    presets: [tailwindPreset(), autoprefixPreset()],
     darkMode: 'class',
     rules: [
         ['title', 'text-7xl font-extrabold'],
         ['section-h', 'text-6xl font-bold border-b p-3']
     ],
+    variants: [
+        ['not-', ({ $$ }) => `&:not(:${$$})`]
+    ],
+    preflight: {
+        '.dark': {
+            colorScheme: 'dark'
+        }
+    },
     theme: {
         extend: {
             keyframes: {

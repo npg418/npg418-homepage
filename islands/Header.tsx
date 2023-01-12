@@ -5,10 +5,9 @@ import { VscGithubAlt, VscTwitter } from 'react-icons/vsc';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    const hamburgerRow = (onOpen: string, c?: string) =>
-        tx`w-6 h-0.5 bg-current rounded-full transition-transform duration-300 not-last-child:mb-2 ${c} ${
-            isOpen ? onOpen : ''
-        }`;
+    const hamburgerRow =
+        tx`w-6 h-0.5 bg-current rounded-full transition-transform duration-300 not-last-child:mb-2`;
+    const onOpen = (c: string) => isOpen ? c : '';
 
     return (
         <header class='w-full bg(blue-200 dark:blue-900)'>
@@ -19,15 +18,19 @@ export default function Header() {
                         onClick={() => setIsOpen(!isOpen)}
                     >
                         <span
-                            class={hamburgerRow(tx`translate-y-2.5 rotate-45`)}
+                            class={`${hamburgerRow} ${
+                                onOpen(tx`translate-y-2.5 rotate-45`)
+                            }`}
                         />
                         <span
-                            class={hamburgerRow(tx`scale-0`, tx`origin-left`)}
+                            class={`${hamburgerRow} origin-right ${
+                                onOpen(tx`scale-0`)
+                            }`}
                         />
                         <span
-                            class={hamburgerRow(
-                                tx`-translate-y-2.5 -rotate-45`,
-                            )}
+                            class={`${hamburgerRow} ${
+                                onOpen(tx`-translate-y-2.5 -rotate-45`)
+                            }`}
                         />
                     </button>
                     <h1 class='text-3xl pl-2'>NPG418 Homepage</h1>
