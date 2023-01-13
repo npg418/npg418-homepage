@@ -15,13 +15,13 @@ export default function Home() {
             </Head>
             <div class='flex items-center mb-32'>
                 <img class='w-1/2' src='npg418.png' alt='NPG418' />
-                <h1 class={`${'title'} ml-4 flex flex-col`}>
+                <h1 class='text-7xl font-extrabold ml-4 flex flex-col'>
                     <span class='text-green-500'>Hello!</span>
                     <span>I'm NPG418</span>
                 </h1>
             </div>
             <section class='mx-5'>
-                <h2 class={`${'section-h'}`}>
+                <h2 class='text-5xl font-bold border-b p-3'>
                     {hour >= 4 && hour < 11
                         ? 'おはよう! '
                         : (hour >= 11 && hour < 17

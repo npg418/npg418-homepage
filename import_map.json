@@ -18,6 +18,8 @@
         "graphql-request": "https://deno.land/x/graphql_request@v4.1.0/mod.ts",
         "zod": "https://deno.land/x/zod@v3.20.2/mod.ts",
         "marked": "https://esm.sh/marked@4.2.5",
+        "prismjs": "npm:prismjs",
+        "prismjs/": "npm:/prismjs/",
         "cookies": "https://deno.land/x/cookies@1.0.0/mod.ts",
         "@/": "./"
     }

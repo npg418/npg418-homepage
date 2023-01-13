@@ -13,7 +13,7 @@ export async function handler(
         name: 'theme',
         value: colorMode.value,
         expires: expires(),
-        path: '/'
+        path: '/',
     });
     return res;
 }
