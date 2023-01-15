@@ -35,7 +35,7 @@ export default function Markdown(props: { children: string; class?: string }) {
                             element.addEventListener('click', (event) => {
                                 const code = element.previousElementSibling.textContent;
                                 const inner = element.innerHTML;
-                                if (code) {
+                                if (code && inner !== 'Copied!') {
                                     window.navigator.clipboard.writeText(code);
                                     element.innerHTML = 'Copied!';
                                     setTimeout(() => {
