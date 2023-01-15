@@ -2,6 +2,7 @@ import { FaRegCopy } from 'react-icons/fa';
 import { marked } from 'marked';
 import { ComponentChildren } from 'preact';
 import { render } from 'preact-render-to-string';
+import { Head } from '$fresh/runtime.ts';
 
 type Tokens = marked.Token[] | marked.TokensList;
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
@@ -81,7 +82,7 @@ export class CustomRenderer {
             >
                 {filename ? <div class='py-1 px-2 bg(gray-300 dark:[#535353]) w-[fit-content] -mt-4 -ml-4 rounded-br'>{filename}</div> : ''}
                 <code dangerouslySetInnerHTML={{ __html: code }} />
-                <button class='absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100' title='クリップボードにコピー'>
+                <button class={`absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100 ${'copy-button'}`} title='クリップボードにコピー'>
                     <FaRegCopy />
                 </button>
             </pre>

@@ -12,16 +12,41 @@ export default function Markdown(props: { children: string; class?: string }) {
     });
 
     return (
-        <article class={props.class}>
-            {new CustomParser({
-                renderer: new CustomRenderer({
-                    highlight: (code, lang) => {
-                        return lang in Prism.languages
-                            ? Prism.highlight(code, Prism.languages[lang], lang)
-                            : code;
-                    },
-                }),
-            }).parse(tokens)}
-        </article>
+        <>
+            <article class={props.class}>
+                {new CustomParser({
+                    renderer: new CustomRenderer({
+                        highlight: (code, lang) => {
+                            return lang in Prism.languages
+                                ? Prism.highlight(
+                                    code,
+                                    Prism.languages[lang],
+                                    lang,
+                                )
+                                : code;
+                        },
+                    }),
+                }).parse(tokens)}
+            </article>
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `
+                        [...document.getElementsByClassName('copy-button')].forEach((element) => {
+                            element.addEventListener('click', (event) => {
+                                const code = element.previousElementSibling.textContent;
+                                const inner = element.innerHTML;
+                                if (code) {
+                                    window.navigator.clipboard.writeText(code);
+                                    element.innerHTML = 'Copied!';
+                                    setTimeout(() => {
+                                        element.innerHTML = inner;
+                                    }, 1500);
+                                }
+                            });
+                        });
+                    `,
+                }}
+            />
+        </>
     );
 }

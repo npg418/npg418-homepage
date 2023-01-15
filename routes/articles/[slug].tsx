@@ -3,7 +3,7 @@ import { Head } from '$fresh/runtime.ts';
 import { Article } from '@/types/schema.ts';
 import { getData } from '@/utils/database.ts';
 import { InferPageProps } from '@/types/util.ts';
-import Markdown from '../../components/Markdown.tsx';
+import Markdown from '@/components/Markdown.tsx';
 
 export const handler: Handlers<Article> = {
     async GET(_, ctx) {

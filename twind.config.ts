@@ -15,16 +15,17 @@ export default defineConfig({
         ${await (await fetch(
         `https://esm.sh/prismjs@1.29.0/themes/prism.css`,
     )).text()}
-        ${(await (await fetch(
-        `https://esm.sh/prismjs@1.29.0/themes/prism-tomorrow.css`,
-    )).text()).replaceAll(/\/\*[^*]*\*+([^/*][^*]*\*+)*\//g, '').replaceAll(
-        /[^\{\}]*\{/g,
-        (match) =>
-            match.split(',').map((v) =>
-                v.startsWith('@') ? v : '.dark ' + v
-            ).join(','),
-    )
-        }
+        ${
+        (await (await fetch(
+            `https://esm.sh/prismjs@1.29.0/themes/prism-tomorrow.css`,
+        )).text()).replaceAll(/\/\*[^*]*\*+([^/*][^*]*\*+)*\//g, '').replaceAll(
+            /[^\{\}]*\{/g,
+            (match) =>
+                match.split(',').map((v) =>
+                    v.startsWith('@') ? v : '.dark ' + v
+                ).join(','),
+        )
+    }
         .dark code[class*="language-"],
         .dark pre[class*="language-"] {
             text-shadow: none;
