@@ -1,13 +1,11 @@
 import { css, defineConfig } from '@twind/core';
-import tailwindPreset from '@twind/preset-tailwind';
-import autoprefixPreset from '@twind/preset-autoprefix';
+import tailwind from '@twind/preset-tailwind';
+import autoprefix from '@twind/preset-autoprefix';
+import ext from '@twind/preset-ext';
 
 export default defineConfig({
-    presets: [tailwindPreset(), autoprefixPreset()],
+    presets: [tailwind(), autoprefix(), ext()],
     darkMode: 'class',
-    variants: [
-        ['not-', ({ $$ }) => `&:not(:${$$})`],
-    ],
     preflight: css`
         .dark {
             colorScheme: dark;
@@ -15,17 +13,16 @@ export default defineConfig({
         ${await (await fetch(
         `https://esm.sh/prismjs@1.29.0/themes/prism.css`,
     )).text()}
-        ${
-        (await (await fetch(
-            `https://esm.sh/prismjs@1.29.0/themes/prism-tomorrow.css`,
-        )).text()).replaceAll(/\/\*[^*]*\*+([^/*][^*]*\*+)*\//g, '').replaceAll(
-            /[^\{\}]*\{/g,
-            (match) =>
-                match.split(',').map((v) =>
-                    v.startsWith('@') ? v : '.dark ' + v
-                ).join(','),
-        )
-    }
+        ${(await (await fetch(
+        `https://esm.sh/prismjs@1.29.0/themes/prism-tomorrow.css`,
+    )).text()).replaceAll(/\/\*[^*]*\*+([^/*][^*]*\*+)*\//g, '').replaceAll(
+        /[^\{\}]*\{/g,
+        (match) =>
+            match.split(',').map((v) =>
+                v.startsWith('@') ? v : '.dark ' + v
+            ).join(','),
+    )
+        }
         .dark code[class*="language-"],
         .dark pre[class*="language-"] {
             text-shadow: none;

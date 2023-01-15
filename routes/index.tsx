@@ -33,7 +33,10 @@ export default function Home() {
                     NPG418です。はい。<br />
                     作ったものとか置いてこうと思います。よろ。<br />
                     何かあったらTwitter:{' '}
-                    <a href='https://twitter.com/npg418'>
+                    <a
+                        href='https://twitter.com/npg418'
+                        class='hover:underline'
+                    >
                         @npg418
                     </a>とかDiscord: npg418#3201までどうぞ。
                 </p>

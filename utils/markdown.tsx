@@ -1,8 +1,7 @@
 import { FaRegCopy } from 'react-icons/fa';
-import { marked } from 'marked';
+import { marked, Tokenizer } from 'marked';
 import { ComponentChildren } from 'preact';
 import { render } from 'preact-render-to-string';
-import { Head } from '$fresh/runtime.ts';
 
 type Tokens = marked.Token[] | marked.TokensList;
 type HeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
@@ -32,8 +31,8 @@ export class CustomRenderer {
             <Tag
                 id={id}
                 class={`text-${fontSize[level]} ${
-                    level <= 2 ? 'border-b' : ''
-                } pb-2 my-3`}
+                    level <= 3 ? 'border-b pb-2' : ''
+                } my-3`}
             >
                 {text}
             </Tag>
@@ -41,12 +40,20 @@ export class CustomRenderer {
     }
 
     paragraph(children: ComponentChildren) {
-        return <p class='m-1'>{children}</p>;
+        return <p>{children}</p>;
     }
 
     link(href: string, children: ComponentChildren, title?: string) {
         if (href === '') return <>{children}</>;
-        return <a href={href} title={title}>{children}</a>;
+        return (
+            <a
+                href={href}
+                title={title}
+                class='text-blue(700 dark:400) hover:underline'
+            >
+                {children}
+            </a>
+        );
     }
 
     image(src: string, alt: string, title?: string) {
@@ -80,7 +87,7 @@ export class CustomRenderer {
                     lang || 'none'
                 } rounded flex flex-col relative group`}
             >
-                {filename ? <div class='py-1 px-2 bg(gray-300 dark:[#535353]) w-[fit-content] -mt-4 -ml-4 rounded-br'>{filename}</div> : ''}
+                {filename ? <div class='py-1 px-2 bg-gray(300 dark:600) w-[fit-content] -mt-4 -ml-4 rounded-br'>{filename}</div> : ''}
                 <code dangerouslySetInnerHTML={{ __html: code }} />
                 <button class={`absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100 ${'copy-button'}`} title='クリップボードにコピー'>
                     <FaRegCopy />
@@ -90,12 +97,20 @@ export class CustomRenderer {
     }
 
     blockquote(children: ComponentChildren) {
-        return <blockquote>{children}</blockquote>;
+        return (
+            <blockquote class='border(l-4 gray(300 dark:600)) pl-2 m-1'>
+                {children}
+            </blockquote>
+        );
     }
 
     list(children: ComponentChildren, ordered: boolean) {
         const Tag = ordered ? 'ol' : 'ul';
-        return <Tag>{children}</Tag>;
+        return (
+            <Tag class={`m-1 pl-6 ${ordered ? 'list-decimal' : 'list-disc'}`}>
+                {children}
+            </Tag>
+        );
     }
 
     listItem(children: ComponentChildren) {
@@ -335,4 +350,7 @@ export class CustomParser {
             })
             : text;
     }
+}
+
+export class CustomTokenizer extends Tokenizer {
 }
