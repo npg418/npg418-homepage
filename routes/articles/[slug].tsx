@@ -29,7 +29,12 @@ export default function ArticlePage({ data }: InferPageProps<typeof handler>) {
             <Head>
                 <title>{data.title} - NPG418</title>
             </Head>
-            <Markdown class='mt-10'>{data.body}</Markdown>
+            <Markdown
+                as='article'
+                class='mt-10'
+            >
+                {data.body}
+            </Markdown>
         </>
     );
 }
