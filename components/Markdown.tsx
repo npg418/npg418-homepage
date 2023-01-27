@@ -3,12 +3,10 @@ import Prism from 'prismjs';
 import loadLanguage from 'prismjs/components/index.js';
 import { DOMParser, Element } from 'deno-dom';
 import { JSX } from 'preact/jsx-runtime';
-import { css, tx } from '@twind/core';
+import { tx } from '@twind/core';
 import { Head } from '$fresh/runtime.ts';
-import { renderToString } from 'preact-render-to-string';
-import { FaRegCopy } from 'react-icons/fa';
-import anchorPlugin from 'markdown-it-anchor';
-import footnotePlugin from 'markdown-it-footnote';
+import { anchor, codeblock } from '@/utils/plugins.ts';
+import footnote from 'footnote';
 import PrismStyle from '@/islands/PrismStyle.tsx';
 
 export default function Markdown(props: {
@@ -30,26 +28,7 @@ export default function Markdown(props: {
         },
     });
 
-    md.use(anchorPlugin).use(footnotePlugin);
-
-    md.renderer.rules.fence = (tokens, idx) => {
-        const target = tokens[idx];
-        const [lang, filename] = target.info.split(':');
-
-        if (lang && md.options.highlight) {
-            target.content = md.options.highlight(target.content, lang, '');
-        }
-
-        return `<pre class="${md.options.langPrefix}${
-            lang || 'none'
-        } ${tx`rounded relative group`}">${
-            filename
-                ? `<div class="${tx`py-1 px-2 bg-gray(300 dark:600) w-[fit-content] -mt-4 -ml-4 mb-1 rounded-br`}">${filename}</div>`
-                : ''
-        }<code>${target.content}</code><button class="${tx`absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100`}" title="クリップボードにコピー" onclick="copyCode(this)">${
-            renderToString(<FaRegCopy />)
-        }</button></pre>`;
-    };
+    md.use(anchor).use(codeblock).use(footnote);
 
     const result = new DOMParser().parseFromString(
         md.render(props.children),
