@@ -1,16 +1,17 @@
-import { css, defineConfig } from '@twind/core';
+import { defineConfig } from '@twind/core';
 import tailwind from '@twind/preset-tailwind';
 import autoprefix from '@twind/preset-autoprefix';
 import ext from '@twind/preset-ext';
+import typography from '@twind/preset-typography';
 
 export default defineConfig({
-    presets: [tailwind(), autoprefix(), ext()],
+    presets: [tailwind(), autoprefix(), ext(), typography()],
     darkMode: 'class',
-    preflight: css`
-        .dark {
-            colorScheme: dark;
+    preflight: {
+        '.dark': {
+            colorScheme: 'dark',
         }
-    `,
+    },
     theme: {
         extend: {
             keyframes: {

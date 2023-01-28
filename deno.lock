@@ -391,6 +391,7 @@
     "https://esm.sh/@twind/preset-autoprefix@1.0.6": "41c31cd9e89bbe745a5cd61b70370ca75d826957c76c7319d638e40a64b55646",
     "https://esm.sh/@twind/preset-ext@1.0.6": "9b9c279582514671c5d4c279dc5b68d8fd204378dce707c216e5dbf22d080410",
     "https://esm.sh/@twind/preset-tailwind@1.1.3": "c4b736c1f4bebfb4ff137c8a3ccd88214ff8d3245bf4d11bdd7da751a2df4943",
+    "https://esm.sh/@twind/preset-typography@1.0.7": "3fe05d1439a67b1050c09ac297cb0de59a8307ed2f1341d47dd9e99632072151",
     "https://esm.sh/highlight.js@11.7.0": "3b9c28856898041682391c1a66db5dd9f9d471e8369cc1c14773a2f2defa9c79",
     "https://esm.sh/highlight.js@11.7.0/highlight.js": "b91b708cf1af9fc54be04ac6470b553900977bdc89628b10ad619fd8a27bc89d",
     "https://esm.sh/markdown-it-anchor@8.6.6": "7eb8a6e230486b6cdb9c1502951f7060482d76bd7b7f9bcf49b14d4e71502bbd",
@@ -881,6 +882,9 @@
     "https://esm.sh/v103/uc.micro@1.0.6/deno/categories/Z/regex.js": "4bfc4153ad1a995246c711230ecfc0b4c9274c9148d0a3d3309f770ca25c3907",
     "https://esm.sh/v103/uc.micro@1.0.6/deno/properties/Any/regex.js": "943005cb551bcde2ac1cf871976ac01863b9cfc0a17944f30ec74d0413617c0e",
     "https://esm.sh/v103/uc.micro@1.0.6/deno/uc.micro.js": "c5f75cf07a117d98a91c48ab9467517542b0b043fff6c6174466a415990ce286",
+    "https://esm.sh/v104/@twind/core@1.1.3/deno/core.js": "621d51213bd6f395ab36046ef38377d10fa278bc7739a5fdf8980eaea30049fd",
+    "https://esm.sh/v104/@twind/preset-typography@1.0.7/deno/preset-typography.js": "5958a2436ee5939076a147c201d93c2912c42a0974276310466afd37c864d434",
+    "https://esm.sh/v104/@twind/preset-typography@1.0.7/preset-typography.d.ts": "a37b73a0835396571ae9c75118d64626e768e0604d4ebcf99d2e2337825c5235",
     "https://esm.sh/v104/preact@10.11.0/jsx-runtime/src/index.d.ts": "e153460ed2b3fe2ad8b93696ecd48fbf73cd628b0b0ea6692b71804a3af69dfd",
     "https://esm.sh/v104/preact@10.11.0/src/index.d.ts": "1a5c331227be54be6515b0c92a469d352834fa413963ae84a39a05a3177111f6",
     "https://esm.sh/v104/preact@10.11.0/src/jsx.d.ts": "c423715fd7992b2e1446fea11d2d04e8adbd66c1edca1ce5e85f90e0d26a2eb2"
