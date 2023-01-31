@@ -1,4 +1,3 @@
-import { IS_BROWSER } from '$fresh/runtime.ts';
 import { JSX } from 'preact/jsx-runtime';
 
 export default function BackButton(
@@ -7,7 +6,7 @@ export default function BackButton(
     return (
         <button
             {...props}
-            onClick={(e) => {
+            onClick={() => {
                 window.history.back();
             }}
         />

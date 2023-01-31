@@ -3,6 +3,7 @@ import { renderToString } from 'preact-render-to-string';
 import MarkdownIt from 'markdown-it';
 import { FaRegCopy } from 'react-icons/fa';
 import { RenderRule } from 'markdown-it/renderer.d.ts';
+import { dedent } from "@/utils/strings.ts";
 
 export const anchor: MarkdownIt.PluginSimple = (md) => {
     md.core.ruler.push('anchor', ({ tokens }) => {
@@ -36,26 +37,19 @@ export const codeblock: MarkdownIt.PluginSimple = (md) => {
             target.content = md.options.highlight(target.content, lang, '');
         }
 
-        return `<pre class="${md.options.langPrefix}${
-            lang || 'none'
-        } ${tx`rounded relative group`}">${
-            filename
+        return dedent`
+            <pre class="${md.options.langPrefix + (lang || 'none')} ${tx`rounded relative group`}">
+                ${filename
                 ? `<div class="${tx`py-1 px-2 bg-gray(300 dark:600) w-[fit-content] -mt-4 -ml-4 mb-1 rounded-br`}">${filename}</div>`
                 : ''
-        }<code>${target.content}</code><button class="${tx`absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100`}" title="クリップボードにコピー" onclick="copyCode(this)">${
-            renderToString(FaRegCopy({}))
-        }</button></pre>`;
+            }
+                <code>${target.content}</code>
+                <button class="${tx`absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100`}" title="クリップボードにコピー" onclick="copyCode(this)">
+                    ${renderToString(FaRegCopy({}))}
+                </button>
+            </pre>
+            `;
     };
 
     md.renderer.rules.fence = md.renderer.rules.code_block = rule;
 };
-
-// type ClassRecord = {
-//     [key in keyof JSX.IntrinsicElements]?: (token: Token, idx: number, tokens: Token[]) => string;
-// };
-
-// export const applyClass: MarkdownIt.PluginWithOptions<ClassRecord> = (md, handlers) => {
-//     if (!handlers) return;
-
-//     Object.entries(handlers).filter(([_, handler]) => handler).forEach([name,])
-// }

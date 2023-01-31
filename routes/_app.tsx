@@ -15,7 +15,7 @@ export default function App({ Component }: AppProps) {
                     }}
                 />
             </Head>
-            <body class='bg-gray-100 dark:(bg-gray-800 text-gray-100) transition-colors overflow-y-scroll'>
+            <body class='bg-gray-100 text-gray-900 transition-colors overflow-y-scroll'>
                 <Header />
                 <main class='mx-auto max-w-screen-lg p-4'>
                     <Component />
