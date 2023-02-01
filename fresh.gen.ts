@@ -10,7 +10,7 @@ import * as $3 from './routes/articles/[slug].tsx';
 import * as $4 from './routes/index.tsx';
 import * as $$0 from './islands/BackButton.tsx';
 import * as $$1 from './islands/Header.tsx';
-import * as $$2 from './islands/PrismStyle.tsx';
+import * as $$2 from './islands/MarkdownStyles.tsx';
 import * as $$3 from './islands/ThemeToggleButton.tsx';
 
 const manifest = {
@@ -24,7 +24,7 @@ const manifest = {
     islands: {
         './islands/BackButton.tsx': $$0,
         './islands/Header.tsx': $$1,
-        './islands/PrismStyle.tsx': $$2,
+        './islands/MarkdownStyles.tsx': $$2,
         './islands/ThemeToggleButton.tsx': $$3,
     },
     baseUrl: import.meta.url,
