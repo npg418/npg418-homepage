@@ -2,9 +2,10 @@ import { autoDarkColor, defineConfig } from '@twind/core';
 import tailwind from '@twind/preset-tailwind';
 import autoprefix from '@twind/preset-autoprefix';
 import ext from '@twind/preset-ext';
+import typography from '@twind/preset-typography';
 
 export default defineConfig({
-    presets: [tailwind(), autoprefix(), ext()],
+    presets: [tailwind(), autoprefix(), ext(), typography()],
     darkMode: 'class',
     preflight: {
         '.dark': {

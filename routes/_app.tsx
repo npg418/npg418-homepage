@@ -17,7 +17,7 @@ export default function App({ Component }: AppProps) {
             </Head>
             <body class='bg-gray-100 text-gray-900 transition-colors overflow-y-scroll'>
                 <Header />
-                <main class='mx-auto max-w-screen-lg p-4'>
+                <main class='mx-auto max-w-prose p-4'>
                     <Component />
                 </main>
             </body>

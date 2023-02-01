@@ -2,10 +2,13 @@ import MarkdownIt from 'markdown-it';
 import Prism from 'prismjs';
 import loadLanguage from 'prismjs/components/index.js';
 import { JSX } from 'preact/jsx-runtime';
-import { anchor, codeblock } from '@/utils/plugins.ts';
-import footnote from 'footnote';
-import MarkdownStyles from '@/islands/MarkdownStyles.tsx';
+import footnote from 'md-footnote';
+import emoji from 'md-emoji';
+import math from 'md-math';
+import katex from 'katex';
+import { anchor, codeblock } from '@/utils/plugins.tsx';
 import { dedent } from '@/utils/strings.ts';
+import MdStyles from '@/islands/MdStyles.tsx';
 
 export default function Markdown(props: {
     as?: keyof JSX.IntrinsicElements;
@@ -26,32 +29,46 @@ export default function Markdown(props: {
         },
     });
 
-    md.use(anchor).use(codeblock).use(footnote);
+    md.use(anchor).use(codeblock).use(footnote).use(emoji).use(math, {
+        allow_space: true,
+        allow_digits: true,
+        double_inline: true,
+        allow_labels: true,
+        renderer(content, { displayMode }) {
+            return katex.renderToString(content, {
+                displayMode,
+                throwOnError: false,
+            });
+        },
+    });
 
     const Tag = props.as || 'div';
 
     return (
         <>
+            <MdStyles />
+            <Tag
+                dangerouslySetInnerHTML={{ __html: md.render(props.children) }}
+                class={`${props.class ?? ''} ${'prose'} mx-auto`}
+            />
             <script
                 dangerouslySetInnerHTML={{
                     __html: dedent`
-                        function copyCode(element) {
-                            const code = element.previousElementSibling.textContent;
-                            const inner = element.innerHTML;
-                            if (code && inner !== 'Copied!') {
-                                window.navigator.clipboard.writeText(code);
-                                element.innerHTML = 'Copied!';
-                                setTimeout(() => {
-                                    element.innerHTML = inner;
-                                }, 1500);
-                            }
-                        }
-                        `,
+                        [...document.getElementsByClassName('copy-button')].forEach((button) => {
+                            button.addEventListener('click', () => {
+                                const code = button.previousElementSibling.textContent;
+                                const inner = button.innerHTML;
+                                if (code && inner !== 'Copied!') {
+                                    window.navigator.clipboard.writeText(code);
+                                    button.innerHTML = 'Copied!';
+                                    setTimeout(() => {
+                                        button.innerHTML = inner;
+                                    }, 1500);
+                                }
+                            });
+                        });
+                    `,
                 }}
-            />
-            <MarkdownStyles />
-            <Tag
-                dangerouslySetInnerHTML={{ __html: md.render(props.children) }}
             />
         </>
     );

@@ -1,6 +1,6 @@
 import { useColorModeValue } from '@/utils/colormode.ts';
 
-export default function MarkdownStyles() {
+export default function MdStyles() {
     return (
         <>
             <link
@@ -11,9 +11,7 @@ export default function MarkdownStyles() {
             />
             <link
                 rel='stylesheet'
-                href={`https://esm.sh/github-markdown-css@5.1.0/github-markdown-${
-                    useColorModeValue('light', 'dark')
-                }.css`}
+                href='https://esm.sh/katex@0.16.4/dist/katex.min.css'
             />
         </>
     );

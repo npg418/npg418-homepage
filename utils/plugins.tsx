@@ -37,21 +37,22 @@ export const codeblock: MarkdownIt.PluginSimple = (md) => {
             target.content = md.options.highlight(target.content, lang, '');
         }
 
-        return dedent`
-            <pre class="${
-            md.options.langPrefix + (lang || 'none')
-        } ${tx`rounded relative group`}">
-                ${
-            filename
-                ? `<div class="${tx`py-1 px-2 bg-gray(300 dark:600) w-[fit-content] -mt-4 -ml-4 mb-1 rounded-br`}">${filename}</div>`
-                : ''
-        }
-                <code>${target.content}</code>
-                <button class="${tx`absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100`}" title="クリップボードにコピー" onclick="copyCode(this)">
-                    ${renderToString(FaRegCopy({}))}
+        return renderToString(
+            <pre
+                class={`${
+                    md.options.langPrefix + (lang || 'none')
+                } rounded relative group`}
+            >
+                {filename
+                    ? <div class="py-1 px-2 bg-gray(300 dark:600) w-[fit-content] -mt-4 -ml-4 mb-1 rounded-br">{filename}</div>
+                    : ''
+                }
+                <code dangerouslySetInnerHTML={{__html: target.content}} />
+                <button class={`${'copy-button'} absolute top-4 right-4 opacity-0 transition-opacity group-hover:opacity-100`} title="クリップボードにコピー">
+                    <FaRegCopy />
                 </button>
-            </pre>
-            `;
+            </pre>,
+        );
     };
 
     md.renderer.rules.fence = md.renderer.rules.code_block = rule;

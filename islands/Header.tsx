@@ -11,7 +11,7 @@ export default function Header() {
 
     return (
         <header class='w-full bg(blue-200 dark:blue-900)'>
-            <div class='mx-auto max-w-screen-lg p-4 bg(blue-200 dark:blue-900) relative z-10'>
+            <div class='mx-auto max-w-screen-md p-4 bg(blue-200 dark:blue-900) relative z-10'>
                 <div class='flex items-center'>
                     <button
                         class='flex flex-col items-center justify-center w-10 h-10 py-2 focus:outline-none'
@@ -44,7 +44,7 @@ export default function Header() {
                         : '-translate-y-[3.75rem] h-0'
                 }`}
             >
-                <div class='mx-auto max-w-screen-lg p-4'>
+                <div class='mx-auto max-w-screen-md p-4'>
                     <ul class='flex text-xl ml-2 children:(not-first-child:(border-l-1 pl-1) pr-1)'>
                         <li>
                             <a
