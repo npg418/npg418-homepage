@@ -1,10 +1,18 @@
-import { Configuration } from 'twind';
+import { autoDarkColor, defineConfig } from '@twind/core';
+import tailwind from '@twind/preset-tailwind';
+import autoprefix from '@twind/preset-autoprefix';
+import ext from '@twind/preset-ext';
+import typography from '@twind/preset-typography';
 
-export default {
+export default defineConfig({
+    presets: [tailwind(), autoprefix(), ext(), typography()],
     darkMode: 'class',
-    plugins: {
-        content: (parts) => ({ content: `"${parts[0] || ''}"` }),
+    preflight: {
+        '.dark': {
+            colorScheme: 'dark',
+        },
     },
+    darkColor: autoDarkColor,
     theme: {
         extend: {
             keyframes: {
@@ -24,11 +32,6 @@ export default {
             },
         },
     },
-    preflight: {
-        '.dark': {
-            colorScheme: 'dark',
-        },
-    },
-} as Omit<Configuration, 'mode' | 'sheet'>;
+});
 
 export const configURL = import.meta.url;

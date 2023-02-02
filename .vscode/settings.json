@@ -11,5 +11,12 @@
     "deno.config": "./deno.json",
     "editor.quickSuggestions": {
         "strings": "on"
+    },
+    "[graphql]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "code-runner.executorMap": {
+        "javascript": "deno run -A",
+        "typescript": "deno run -A"
     }
 }
