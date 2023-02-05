@@ -30,6 +30,7 @@
         "katex": "https://esm.sh/katex@0.16.4",
         "prismjs": "https://esm.sh/prismjs@1.29.0",
         "deno-dom": "https://deno.land/x/deno_dom@v0.1.36-alpha/deno-dom-wasm.ts",
+        "deno-cron": "https://deno.land/x/deno_cron@v1.0.0/cron.ts",
         "@/": "./"
     }
 }
