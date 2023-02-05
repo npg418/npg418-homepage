@@ -27,9 +27,9 @@
         "md-emoji": "https://esm.sh/markdown-it-emoji@2.0.2",
         "md-footnote": "https://esm.sh/markdown-it-footnote@3.0.3",
         "md-math": "https://esm.sh/markdown-it-dollarmath@0.4.2",
-        "prismjs": "npm:prismjs",
-        "prismjs/": "npm:/prismjs/",
         "katex": "https://esm.sh/katex@0.16.4",
+        "prismjs": "https://esm.sh/prismjs@1.29.0",
+        "deno-dom": "https://deno.land/x/deno_dom@v0.1.36-alpha/deno-dom-wasm.ts",
         "@/": "./"
     }
 }
