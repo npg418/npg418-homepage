@@ -6,8 +6,7 @@ NPG418([@npg418](https://github.com/npg418))のホームページです。\
 
 ## 使っているブツ
 
-freshな気持ちになりたいので[fresh](https://fresh.deno.dev/)。\
-_**俺こそがfreshだ。**_
+freshな気持ちになりたいので[fresh](https://fresh.deno.dev/)。
 
 ---
 

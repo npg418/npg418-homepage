@@ -7,8 +7,7 @@ please go ahead.
 
 ## Using the THING
 
-I want to feel fresh, so I use [fresh](https://fresh.deno.dev/).\
-_**I'm the fresh.**_
+I wanna feel fresh, so I use [fresh](https://fresh.deno.dev/).
 
 ---
 

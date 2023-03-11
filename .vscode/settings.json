@@ -1,22 +1,5 @@
 {
-    "deno.enable": true,
-    "deno.lint": true,
-    "editor.defaultFormatter": "denoland.vscode-deno",
-    "[yaml]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "denoland.vscode-deno"
-    },
-    "deno.config": "./deno.json",
-    "editor.quickSuggestions": {
-        "strings": "on"
-    },
-    "[graphql]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "code-runner.executorMap": {
-        "javascript": "deno run -A",
-        "typescript": "deno run -A"
-    }
+  "deno.enable": true,
+  "deno.lint": true,
+  "editor.defaultFormatter": "denoland.vscode-deno"
 }
