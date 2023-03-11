@@ -2,13 +2,11 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import config from "./deno.json" assert { type: "json" };
+import config from './deno.json' assert { type: 'json' };
 
 const manifest = {
-    routes: {
-    },
-    islands: {
-    },
+    routes: {},
+    islands: {},
     baseUrl: import.meta.url,
     config,
 };
