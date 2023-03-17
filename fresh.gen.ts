@@ -3,10 +3,18 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import config from './deno.json' assert { type: 'json' };
+import * as $0 from './routes/_app.tsx';
+import * as $1 from './routes/index.tsx';
+import * as $$0 from './islands/ColormodeClient.tsx';
 
 const manifest = {
-    routes: {},
-    islands: {},
+    routes: {
+        './routes/_app.tsx': $0,
+        './routes/index.tsx': $1,
+    },
+    islands: {
+        './islands/ColormodeClient.tsx': $$0,
+    },
     baseUrl: import.meta.url,
     config,
 };
