@@ -1,13 +1,10 @@
-import { Options } from '$fresh/plugins/twind.ts';
+import { defineConfig } from '@twind/core';
+import tailwindPreset from '@twind/preset-tailwind';
+import { Options } from '$fresh/plugins/twindv1.ts';
 
-const option: Options = {
+export default {
+    ...defineConfig({
+        presets: [tailwindPreset()],
+    }),
     selfURL: import.meta.url,
-    darkMode: 'class',
-    preflight: {
-        '.dark': {
-            colorScheme: 'dark',
-        },
-    },
-};
-
-export default option;
+} as Options;
