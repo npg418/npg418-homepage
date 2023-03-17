@@ -5,7 +5,6 @@ export default function App({ Component }: AppProps) {
     return (
         <html>
             <ColormodeClient />
-
             <body class='min-h-screen'>
                 <Component />
             </body>
