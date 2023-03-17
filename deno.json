@@ -14,7 +14,8 @@
         "options": {
             "indentWidth": 4,
             "singleQuote": true,
-            "semiColons": true
+            "semiColons": true,
+            "lineWidth": 100
         }
     }
 }
