@@ -18,5 +18,6 @@ export default function ColormodeClient() {
                 break;
         }
     }, []);
-    return null;
+    // TO-DO: remove element
+    return <div></div>;
 }
