@@ -7,7 +7,7 @@ export default function App({ Component }: AppProps) {
     return (
         <html>
             <Head>
-                <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+                <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
             </Head>
             <ColormodeClient />
             <body class='min-h-screen'>
