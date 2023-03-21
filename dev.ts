@@ -2,4 +2,6 @@
 
 import dev from '$fresh/dev.ts';
 
+await Deno.run({ cmd: ['deno', 'fmt'] }).status();
+
 await dev(import.meta.url, './main.ts');
