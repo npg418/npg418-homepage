@@ -10,9 +10,11 @@ export default function App({ Component }: AppProps) {
                 <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
             </Head>
             <ColormodeClient />
-            <body class='min-h-screen'>
+            <body class='min-h-screen bg-gray-100'>
                 <Header />
-                <Component />
+                <main class='max-w-screen-md mx-auto mt-10'>
+                    <Component />
+                </main>
             </body>
         </html>
     );

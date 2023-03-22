@@ -7,6 +7,7 @@ import * as $0 from './routes/_app.tsx';
 import * as $1 from './routes/_middleware.ts';
 import * as $2 from './routes/index.tsx';
 import * as $$0 from './islands/ColormodeClient.tsx';
+import * as $$1 from './islands/NavButton.tsx';
 
 const manifest = {
     routes: {
@@ -16,6 +17,7 @@ const manifest = {
     },
     islands: {
         './islands/ColormodeClient.tsx': $$0,
+        './islands/NavButton.tsx': $$1,
     },
     baseUrl: import.meta.url,
     config,
