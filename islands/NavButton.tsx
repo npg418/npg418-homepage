@@ -8,9 +8,7 @@ export default function NavButton(
 
     return (
         <li
-            class={location?.pathname === props.href
-                ? 'text-gray-400'
-                : 'hover:bg-gray(300 dark:800)'}
+            class={location?.pathname === props.href ? 'text-gray-400' : 'hover:bg-gray-300'}
         >
             <a
                 class='p-3 inline-block'
