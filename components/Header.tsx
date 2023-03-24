@@ -2,7 +2,7 @@ import NavButton from '@/islands/NavButton.tsx';
 
 export default function Header() {
     return (
-        <header class='sticky w-[100vw] border(b gray-400)'>
+        <header class='w-full border(b gray-400)'>
             <div class='max-w-screen-md flex items-center mx-auto'>
                 <h1 class='text-4xl m-4 mr-10'>NPG418</h1>
                 <nav>
