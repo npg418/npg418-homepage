@@ -6,7 +6,6 @@ export default function IndexPage() {
             <Head>
                 <title>NPG418 HP</title>
             </Head>
-            <h1 class='text-7xl text-center'>WIP</h1>
         </>
     );
 }
