@@ -11,6 +11,7 @@ import * as $4 from './routes/posts/index.tsx';
 import * as $5 from './routes/works/index.tsx';
 import * as $$0 from './islands/ColormodeClient.tsx';
 import * as $$1 from './islands/NavButton.tsx';
+import * as $$2 from './islands/TopAnimation.tsx';
 
 const manifest = {
     routes: {
@@ -24,6 +25,7 @@ const manifest = {
     islands: {
         './islands/ColormodeClient.tsx': $$0,
         './islands/NavButton.tsx': $$1,
+        './islands/TopAnimation.tsx': $$2,
     },
     baseUrl: import.meta.url,
     config,

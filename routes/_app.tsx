@@ -12,7 +12,7 @@ export default function App({ Component }: AppProps) {
             <ColormodeClient />
             <body class='min-h-screen bg-gray-100'>
                 <Header />
-                <main class='max-w-screen-md mx-auto mt-10'>
+                <main class='max-w-screen-md mx-auto'>
                     <Component />
                 </main>
             </body>
