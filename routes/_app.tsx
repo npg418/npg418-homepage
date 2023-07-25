@@ -1,7 +1,5 @@
-import { AppProps } from '$fresh/server.ts';
-import Header from '@/components/Header.tsx';
-import ColormodeClient from '@/islands/ColormodeClient.tsx';
 import { Head } from '$fresh/runtime.ts';
+import { AppProps } from '$fresh/server.ts';
 
 export default function App({ Component }: AppProps) {
     return (
@@ -9,10 +7,8 @@ export default function App({ Component }: AppProps) {
             <Head>
                 <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
             </Head>
-            <ColormodeClient />
-            <body class='min-h-screen bg-gray-100'>
-                <Header />
-                <main class='max-w-screen-md mx-auto'>
+            <body>
+                <main>
                     <Component />
                 </main>
             </body>

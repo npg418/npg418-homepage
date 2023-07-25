@@ -7,14 +7,8 @@
 import { start } from '$fresh/server.ts';
 import manifest from '@/fresh.gen.ts';
 
-import twindPlugin, { Options } from '$fresh/plugins/twindv1.ts';
-import config, { configPath } from '@/twind.config.ts';
-
 await start(manifest, {
-    plugins: [twindPlugin({
-        ...config,
-        selfURL: configPath,
-    } as Options)],
+    plugins: [],
     render(ctx, render) {
         ctx.lang = 'ja';
         render();

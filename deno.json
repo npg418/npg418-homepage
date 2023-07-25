@@ -1,11 +1,18 @@
 {
     "tasks": {
-        "start": "deno run -A --watch=static/,routes/ dev.ts",
-        "esm:add": "deno run -A https://esm.sh/v115 add",
-        "esm:update": "deno run -A https://esm.sh/v115 update",
-        "esm:remove": "deno run -A https://esm.sh/v115 remove"
+        "start": "deno run -A --watch=static/,routes/ dev.ts"
     },
-    "importMap": "./import_map.json",
+    "imports": {
+        "@/": "./",
+        "$std/http": "https://deno.land/std@0.179.0/http/mod.ts",
+        "$fresh/": "https://deno.land/x/fresh@1.1.4/",
+        "@preact/signals-core": "https://esm.sh/v115/@preact/signals-core@1.0.1",
+        "@preact/signals": "https://esm.sh/v115/*@preact/signals@1.0.4",
+        "preact-render-to-string": "https://esm.sh/v115/*preact-render-to-string@5.2.6",
+        "preact-render-to-string/": "https://esm.sh/v115/*preact-render-to-string@5.2.6/",
+        "preact": "https://esm.sh/v115/preact@10.11.3",
+        "preact/": "https://esm.sh/v115/preact@10.11.3/"
+    },
     "compilerOptions": {
         "jsx": "react-jsx",
         "jsxImportSource": "preact"
