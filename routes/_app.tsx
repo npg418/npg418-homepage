@@ -7,7 +7,7 @@ export default function App({ Component }: AppProps) {
       <Head>
         <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
       </Head>
-      <body class='w-full'>
+      <body>
         <main>
           <Component />
         </main>
