@@ -4,11 +4,13 @@
 /// <reference lib="dom.asynciterable" />
 /// <reference lib="deno.ns" />
 
+import twindv1 from '$fresh/plugins/twindv1.ts';
 import { start } from '$fresh/server.ts';
 import manifest from '@/fresh.gen.ts';
+import twindConfig from '@/twind.config.ts';
 
 await start(manifest, {
-  plugins: [],
+  plugins: [twindv1(twindConfig)],
   render(ctx, render) {
     ctx.lang = 'ja';
     render();

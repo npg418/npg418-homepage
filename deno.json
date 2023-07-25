@@ -2,6 +2,10 @@
   "tasks": {
     "start": "deno run -A --watch=static/,routes/ dev.ts"
   },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
   "imports": {
     "@/": "./",
     "$std/http": "https://deno.land/std@0.179.0/http/mod.ts",
@@ -9,12 +13,12 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.2.3",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.1.3",
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.0",
-    "preact": "https://esm.sh/preact@10.15.1",
-    "preact/": "https://esm.sh/preact@10.15.1/"
-  },
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "preact": "https://esm.sh/preact@10.16.0",
+    "preact/": "https://esm.sh/preact@10.16.0/",
+    "@twind/core": "https://esm.sh/@twind/core@1.1.3",
+    "@twind/preset-tailwind": "https://esm.sh/@twind/preset-tailwind@1.1.4",
+    "@twind/preset-ext": "https://esm.sh/@twind/preset-ext@1.0.7",
+    "tailwindcss": "https://esm.sh/tailwindcss@3.3.3"
   },
   "fmt": {
     "indentWidth": 2,
