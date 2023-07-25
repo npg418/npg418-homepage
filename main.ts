@@ -8,10 +8,10 @@ import { start } from '$fresh/server.ts';
 import manifest from '@/fresh.gen.ts';
 
 await start(manifest, {
-    plugins: [],
-    render(ctx, render) {
-        ctx.lang = 'ja';
-        render();
-    },
-    port: 3000,
+  plugins: [],
+  render(ctx, render) {
+    ctx.lang = 'ja';
+    render();
+  },
+  port: 3000,
 });

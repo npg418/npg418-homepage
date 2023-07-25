@@ -10,16 +10,16 @@ import * as $4 from './routes/posts/index.tsx';
 import * as $5 from './routes/works/index.tsx';
 
 const manifest = {
-    routes: {
-        './routes/_app.tsx': $0,
-        './routes/_middleware.ts': $1,
-        './routes/index.tsx': $2,
-        './routes/links.tsx': $3,
-        './routes/posts/index.tsx': $4,
-        './routes/works/index.tsx': $5,
-    },
-    islands: {},
-    baseUrl: import.meta.url,
+  routes: {
+    './routes/_app.tsx': $0,
+    './routes/_middleware.ts': $1,
+    './routes/index.tsx': $2,
+    './routes/links.tsx': $3,
+    './routes/posts/index.tsx': $4,
+    './routes/works/index.tsx': $5,
+  },
+  islands: {},
+  baseUrl: import.meta.url,
 };
 
 export default manifest;
