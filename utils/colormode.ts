@@ -1,5 +1,5 @@
 import { signal } from '@preact/signals-core';
-import { getCookies } from '$std/http';
+import { getCookies } from '$std/http/mod.ts';
 
 export type Theme = 'auto' | 'light' | 'dark';
 
