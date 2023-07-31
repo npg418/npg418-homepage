@@ -12,6 +12,11 @@ export default {
     ],
     ...tailwindConfig,
     darkColor: autoDarkColor,
+    preflight: {
+      '.dark': {
+        colorScheme: 'dark',
+      },
+    },
   }),
   selfURL: import.meta.url,
 } as unknown as Options;

@@ -4,13 +4,13 @@ import { theme } from '@/utils/colormode.ts';
 
 export default function App({ Component }: AppProps) {
   return (
-    <html>
+    <html class={theme.value === 'dark' ? 'dark' : ''}>
       <Head>
         <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
         {theme.value === 'auto' ? <script defer src={asset('auto-colormode.js')} /> : null}
       </Head>
-      <body class={theme.value === 'dark' ? 'dark' : ''}>
-        <main class='min-h-screen bg-gray-300'>
+      <body class='min-h-screen bg-gray-300 text-gray-900'>
+        <main>
           <Component />
         </main>
       </body>
