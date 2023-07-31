@@ -1,4 +1,4 @@
-import { defineConfig } from '@twind/core';
+import { autoDarkColor, defineConfig } from '@twind/core';
 import presetTailwind from '@twind/preset-tailwind';
 import presetExt from '@twind/preset-ext';
 import type { Options } from '$fresh/plugins/twindv1.ts';
@@ -11,6 +11,7 @@ export default {
       presetExt(),
     ],
     ...tailwindConfig,
+    darkColor: autoDarkColor,
   }),
   selfURL: import.meta.url,
 } as unknown as Options;

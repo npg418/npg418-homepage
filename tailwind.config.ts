@@ -1,5 +1,5 @@
-import type { TwindUserConfig } from 'twind-config';
 import type { Config } from 'tailwind-config';
+import type { TwindUserConfig } from 'twind-config';
 
 type CommonConfig = {
   [K in keyof TwindUserConfig & keyof Config]?: TwindUserConfig[K] & Config[K];
@@ -8,8 +8,10 @@ type CommonConfig = {
 export default {
   darkMode: 'class',
   theme: {
-    colors: {
-      transparent: 'transparent',
+    extend: {
+      colors: {
+        transparent: 'transparent',
+      },
     },
   },
 } satisfies CommonConfig;

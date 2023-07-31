@@ -12,3 +12,7 @@ export function getTheme(input: string | Headers): Theme {
     return (getCookies(input)['theme'] ?? 'auto') as Theme;
   }
 }
+
+export function updateTheme(input: string | Headers): void {
+  theme.value = getTheme(input);
+}
