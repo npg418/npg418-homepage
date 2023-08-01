@@ -2,25 +2,24 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import config from './deno.json' assert { type: 'json' };
 import * as $0 from './routes/_app.tsx';
 import * as $1 from './routes/_middleware.ts';
 import * as $2 from './routes/index.tsx';
-import * as $$0 from './islands/ColormodeClient.tsx';
-import * as $$1 from './islands/NavButton.tsx';
+import * as $3 from './routes/links.tsx';
+import * as $4 from './routes/posts/index.tsx';
+import * as $5 from './routes/works/index.tsx';
 
 const manifest = {
-    routes: {
-        './routes/_app.tsx': $0,
-        './routes/_middleware.ts': $1,
-        './routes/index.tsx': $2,
-    },
-    islands: {
-        './islands/ColormodeClient.tsx': $$0,
-        './islands/NavButton.tsx': $$1,
-    },
-    baseUrl: import.meta.url,
-    config,
+  routes: {
+    './routes/_app.tsx': $0,
+    './routes/_middleware.ts': $1,
+    './routes/index.tsx': $2,
+    './routes/links.tsx': $3,
+    './routes/posts/index.tsx': $4,
+    './routes/works/index.tsx': $5,
+  },
+  islands: {},
+  baseUrl: import.meta.url,
 };
 
 export default manifest;

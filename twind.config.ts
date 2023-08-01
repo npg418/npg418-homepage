@@ -1,29 +1,24 @@
-import { autoDarkColor as darkColor, defineConfig } from '@twind/core';
-import tailwindPreset from '@twind/preset-tailwind';
-import extPreset from '@twind/preset-ext';
-import { Options } from '$fresh/plugins/twindv1.ts';
+import { autoDarkColor, defineConfig } from '@twind/core';
+import presetTailwind from '@twind/preset-tailwind';
+import presetExt from '@twind/preset-ext';
+import type { Options } from '$fresh/plugins/twindv1.ts';
+import tailwindConfig from '@/tailwind.config.ts';
 
 export default {
-    ...defineConfig({
-        presets: [tailwindPreset(), extPreset()],
-        preflight: {
-            '.dark': {
-                colorScheme: 'dark',
-            },
-        },
-        theme: {
-            extend: {
-                colors: {
-                    gray: {
-                        600: '#848484',
-                        700: '#5e5e5e',
-                        800: '#383838',
-                        900: '#121212',
-                    },
-                },
-            },
-        },
-        darkColor,
-    }),
-    selfURL: import.meta.url,
-} as Options;
+  ...defineConfig({
+    presets: [
+      presetTailwind(),
+      presetExt(),
+    ],
+    ...tailwindConfig,
+    darkColor: autoDarkColor,
+    preflight: {
+      '.dark': {
+        colorScheme: 'dark',
+      },
+      '@import':
+        'url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Zen+Antique&family=Zen+Kaku+Gothic+New&display=swap");',
+    },
+  }),
+  selfURL: import.meta.url,
+} as unknown as Options;
