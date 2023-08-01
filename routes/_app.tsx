@@ -10,7 +10,7 @@ export default function App({ Component }: AppProps) {
         {theme.value === 'auto' ? <script defer src={asset('auto-colormode.js')} /> : null}
       </Head>
       <body class='min-h-screen bg-gray-300 text-gray-900'>
-        <main>
+        <main class='max-w-screen-lg mx-auto'>
           <Component />
         </main>
       </body>

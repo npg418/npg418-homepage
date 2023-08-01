@@ -13,5 +13,10 @@ export default {
         transparent: 'transparent',
       },
     },
+    fontFamily: {
+      sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
+      serif: ['"Zen Antique"', 'serif'],
+      mono: ['"Source Code Pro"', 'monospace'],
+    },
   },
 } satisfies CommonConfig;

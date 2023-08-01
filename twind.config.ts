@@ -16,6 +16,8 @@ export default {
       '.dark': {
         colorScheme: 'dark',
       },
+      '@import':
+        'url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Zen+Antique&family=Zen+Kaku+Gothic+New&display=swap");',
     },
   }),
   selfURL: import.meta.url,
