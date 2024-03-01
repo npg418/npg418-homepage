@@ -1,22 +1,10 @@
-import type { Config } from 'tailwind-config';
-import type { TwindUserConfig } from 'twind-config';
-
-type CommonConfig = {
-  [K in keyof TwindUserConfig & keyof Config]?: TwindUserConfig[K] & Config[K];
-};
+import { Config } from 'tailwindcss';
+import nightwind from 'nightwind';
 
 export default {
-  darkMode: 'class',
-  theme: {
-    extend: {
-      colors: {
-        transparent: 'transparent',
-      },
-    },
-    fontFamily: {
-      sans: ['"Zen Kaku Gothic New"', 'sans-serif'],
-      serif: ['"Zen Antique"', 'serif'],
-      mono: ['"Source Code Pro"', 'monospace'],
-    },
-  },
-} satisfies CommonConfig;
+  content: [
+    '{routes,islands,components}/**/*.{ts,tsx}',
+  ],
+  darkMode: 'selector',
+  plugins: [nightwind],
+} satisfies Config;

@@ -20,10 +20,7 @@ export default function IndexPage() {
         <title>NPG418 HP</title>
       </Head>
       <div class='text-center mb-32'>
-        <style>
-          {`h1 { font-family: &quot;Meiryo&quot;; }`}
-        </style>
-        <h1 class='text-8xl'>NPG418 IS HERE!!</h1>
+        <h1 class='text-8xl mt-5'>NPG418 IS HERE!!</h1>
         <figure class='relative w-fit inline-block'>
           <img src={asset('penguin_transparent.png')} alt='NPG418' />
           <figcaption class='absolute top-20 right-10 -rotate-12'>
@@ -48,7 +45,7 @@ export default function IndexPage() {
             </footer>
           </blockquote>
           <section class='mt-32'>
-            <h3 class='text-xl mb-4'>ワイが使う言語</h3>
+            <h3 class='text-xl mb-4'>よく使う言語</h3>
             <ul class='flex gap-3 flex-wrap items-end'>
               {[
                 Html5Original,
@@ -72,11 +69,10 @@ export default function IndexPage() {
               </li>
             </ul>
           </section>
-          <section class='mt-8'>
-            <h3 class='text-xl mb-4'>
-            </h3>
-          </section>
         </div>
+      </section>
+      <section>
+        <h2 className='text-4xl mb-8'></h2>
       </section>
     </>
   );
