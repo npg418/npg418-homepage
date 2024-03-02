@@ -10,5 +10,8 @@
   "css.lint.unknownAtRules": "ignore",
   "[css]": {
     "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

@@ -3,7 +3,7 @@
   "tasks": {
     "start": "deno run -A --watch=static/,routes/ dev.ts",
     "update": "deno run -A -r https://fresh.deno.dev/update .",
-    "build": "deno run -A dev.ts build",
+    "build": "deno cache npm:@iconify/json && deno run -A dev.ts build",
     "preview": "deno run -A main.ts"
   },
   "compilerOptions": {
