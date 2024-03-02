@@ -6,16 +6,6 @@
 
 import { start } from '$fresh/server.ts';
 import manifest from '@/fresh.gen.ts';
-import twindv1 from '$fresh/plugins/twindv1.ts';
-import twindConfig from '@/twind.config.ts';
+import config from '@/fresh.config.ts';
 
-await start(manifest, {
-  plugins: [
-    twindv1(twindConfig),
-  ],
-  render(ctx, render) {
-    ctx.lang = 'ja';
-    render();
-  },
-  port: 3000,
-});
+await start(manifest, config);

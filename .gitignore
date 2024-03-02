@@ -1,1 +1,5 @@
-deno.lock
+# Fresh build directory
+_fresh/
+
+# NPM libraries
+node_modules

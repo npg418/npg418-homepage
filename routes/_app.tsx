@@ -1,17 +1,22 @@
-import { asset, Head } from '$fresh/runtime.ts';
-import { AppProps } from '$fresh/server.ts';
-import { theme } from '@/utils/colormode.ts';
+import { Head } from '$fresh/runtime.ts';
+import { PageProps } from '$fresh/server.ts';
+import nightwind from 'nightwind/helper.js';
+import Footer from '@/components/Footer.tsx';
+import Header from '@/components/Header.tsx';
 
-export default function App({ Component }: AppProps) {
+export default function App({ Component }: PageProps) {
   return (
-    <html class={theme.value === 'dark' ? 'dark' : ''}>
+    <html lang='jp'>
       <Head>
         <link rel='shortcut icon' href='favicon.ico' type='image/x-icon' />
-        {theme.value === 'auto' ? <script defer src={asset('auto-colormode.js')} /> : null}
+        <link rel='stylesheet' href='/styles.css' />
+        <script dangerouslySetInnerHTML={{ __html: nightwind.init() }}></script>
       </Head>
-      <body class='min-h-screen bg-gray-300 text-gray-900'>
-        <main class='max-w-screen-lg mx-auto'>
+      <body class='min-h-screen bg-gray-300 text-gray-900 flex flex-col'>
+        <main class='max-w-screen-md mx-auto flex-1'>
+          <Header />
           <Component />
+          <Footer />
         </main>
       </body>
     </html>
