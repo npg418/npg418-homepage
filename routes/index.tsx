@@ -62,10 +62,19 @@ export default function IndexPage() {
           </div>
         </section>
         <section>
-          <h2 className='text-4xl mb-8'>
+          <h2 class='text-4xl mb-8'>
             作ったものとか
           </h2>
-          <Card title='TSX Tabler Icons' />
+          <ul class='flex'>
+            <li>
+              <Card href='https://deno.land/x/devicons_tsx' title='Devicons TSX'>
+                An TSX implement of{' '}
+                <a class='text-blue-500 hover:underline' href='https://devicon.dev/'>
+                  Devicons
+                </a>. Easy to use in your fresh project!
+              </Card>
+            </li>
+          </ul>
         </section>
       </article>
     </>
