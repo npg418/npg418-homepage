@@ -6,5 +6,9 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-  "tailwindCSS.experimental.configFile": "./tailwind.config.ts"
+  "tailwindCSS.experimental.configFile": "./tailwind.config.ts",
+  "css.lint.unknownAtRules": "ignore",
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  }
 }

@@ -1,3 +1,4 @@
+// Issue #74
 declare module 'nightwind/helper.js' {
   type NightwindHelperModule = {
     init: () => string;

@@ -8,7 +8,7 @@ import * as $index from './routes/index.tsx';
 import * as $links from './routes/links.tsx';
 import * as $posts_index from './routes/posts/index.tsx';
 import * as $works_index from './routes/works/index.tsx';
-
+import * as $ThemeToggleButton from './islands/ThemeToggleButton.tsx';
 import { type Manifest } from '$fresh/server.ts';
 
 const manifest = {
@@ -20,7 +20,9 @@ const manifest = {
     './routes/posts/index.tsx': $posts_index,
     './routes/works/index.tsx': $works_index,
   },
-  islands: {},
+  islands: {
+    './islands/ThemeToggleButton.tsx': $ThemeToggleButton,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 

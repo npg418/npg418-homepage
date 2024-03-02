@@ -1,17 +1,5 @@
 import { asset, Head } from '$fresh/runtime.ts';
-import IconArrowCurveLeft from 'tabler-icons/arrow-curve-left.tsx';
-import {
-  CplusplusOriginal,
-  CsharpOriginal,
-  Css3Original,
-  Html5Original,
-  JavaOriginal,
-  JavascriptOriginal,
-  KotlinOriginal,
-  LuaOriginal,
-  PythonOriginal,
-  TypescriptOriginal,
-} from 'devicons';
+import clsx from 'clsx';
 
 export default function IndexPage() {
   return (
@@ -20,12 +8,12 @@ export default function IndexPage() {
         <title>NPG418 HP</title>
       </Head>
       <div class='text-center mb-32'>
-        <h1 class='text-8xl mt-5'>NPG418 IS HERE!!</h1>
+        <h1 class='text-8xl'>NPG418 IS HERE!!</h1>
         <figure class='relative w-fit inline-block'>
           <img src={asset('penguin_transparent.png')} alt='NPG418' />
           <figcaption class='absolute top-20 right-10 -rotate-12'>
             <p class='flex items-start text-lg'>
-              <IconArrowCurveLeft class='-rotate-90 translate-y-2' />
+              <span class='i-tabler-arrow-curve-left -rotate-90 translate-y-2' />
               me
             </p>
           </figcaption>
@@ -48,20 +36,20 @@ export default function IndexPage() {
             <h3 class='text-xl mb-4'>よく使う言語</h3>
             <ul class='flex gap-3 flex-wrap items-end'>
               {[
-                Html5Original,
-                Css3Original,
-                JavascriptOriginal,
-                TypescriptOriginal,
-                PythonOriginal,
-                CplusplusOriginal,
-                CsharpOriginal,
-                LuaOriginal,
-                JavaOriginal,
-                KotlinOriginal,
+                'i-devicon-html',
+                'i-devicon-css3',
+                'i-devicon-javascript',
+                'i-devicon-typescript',
+                'i-devicon-python',
+                'i-devicon-cplusplus',
+                'i-devicon-csharp',
+                'i-devicon-lua',
+                'i-devicon-java',
+                'i-devicon-kotlin',
               ]
-                .map((Icon, i) => (
+                .map((icon, i) => (
                   <li key={i}>
-                    <Icon />
+                    <span class={clsx(icon, 'text-6xl')} />
                   </li>
                 ))}
               <li>

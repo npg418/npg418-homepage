@@ -20,12 +20,14 @@
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.0",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.1",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
-    "tabler-icons/": "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/",
     "devicons": "https://deno.land/x/devicons_tsx@1.0.4/mod.ts",
     "tailwindcss": "npm:tailwindcss",
     "tailwindcss/": "npm:/tailwindcss/",
     "nightwind": "npm:nightwind",
-    "nightwind/": "npm:/nightwind/"
+    "nightwind/": "npm:/nightwind/",
+    "clsx": "npm:clsx",
+    "@egoist/tailwindcss-icons": "npm:@egoist/tailwindcss-icons",
+    "@iconify/json": "npm:@iconify/json"
   },
   "fmt": {
     "indentWidth": 2,
