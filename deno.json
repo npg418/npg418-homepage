@@ -14,21 +14,21 @@
   "nodeModulesDir": true,
   "imports": {
     "@/": "./",
-    "$std/": "https://deno.land/std@0.179.0/",
+    "$std/": "https://deno.land/std@0.218.2/",
     "$fresh/": "https://deno.land/x/fresh@1.6.5/",
     "preact": "https://esm.sh/preact@10.19.2",
     "preact/": "https://esm.sh/preact@10.19.2/",
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.0",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.1",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
-    "devicons": "https://deno.land/x/devicons_tsx@1.0.4/mod.ts",
     "tailwindcss": "npm:tailwindcss",
     "tailwindcss/": "npm:/tailwindcss/",
     "nightwind": "npm:nightwind",
     "nightwind/": "npm:/nightwind/",
     "clsx": "npm:clsx",
     "@egoist/tailwindcss-icons": "npm:@egoist/tailwindcss-icons",
-    "@iconify/json": "npm:@iconify/json"
+    "@iconify/json": "npm:@iconify/json",
+    "tailwindcss-lobotomized-owl": "npm:tailwindcss-lobotomized-owl"
   },
   "fmt": {
     "indentWidth": 2,

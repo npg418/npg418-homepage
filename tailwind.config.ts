@@ -1,6 +1,7 @@
 import { Config } from 'tailwindcss';
 import nightwind from 'nightwind';
 import { getIconCollections, iconsPlugin } from '@egoist/tailwindcss-icons';
+import lobotomizedOwl from 'tailwindcss-lobotomized-owl';
 
 export default {
   content: [
@@ -12,5 +13,6 @@ export default {
     iconsPlugin({
       collections: getIconCollections(['tabler', 'devicon']),
     }),
+    lobotomizedOwl,
   ],
 } satisfies Config;

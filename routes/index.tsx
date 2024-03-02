@@ -1,5 +1,6 @@
 import { asset, Head } from '$fresh/runtime.ts';
 import clsx from 'clsx';
+import Card from '@/components/Card.tsx';
 
 export default function IndexPage() {
   return (
@@ -19,49 +20,54 @@ export default function IndexPage() {
           </figcaption>
         </figure>
       </div>
-      <section>
-        <h2 class='text-4xl mb-8'>About me!</h2>
-        <div class='mx-16'>
-          <blockquote class='flex items-end'>
-            <div class='border rounded-3xl w-1/2 h-32 mx-auto relative'>
-              <h1 class='inline-block translate-x-1/2 absolute top-16 right-0'>
-                CSS なんもわからん
-              </h1>
-            </div>
-            <footer>
-              ─ <cite>NPG418</cite>
-            </footer>
-          </blockquote>
-          <section class='mt-32'>
-            <h3 class='text-xl mb-4'>よく使う言語</h3>
-            <ul class='flex gap-3 flex-wrap items-end'>
-              {[
-                'i-devicon-html',
-                'i-devicon-css3',
-                'i-devicon-javascript',
-                'i-devicon-typescript',
-                'i-devicon-python',
-                'i-devicon-cplusplus',
-                'i-devicon-csharp',
-                'i-devicon-lua',
-                'i-devicon-java',
-                'i-devicon-kotlin',
-              ]
-                .map((icon, i) => (
-                  <li key={i}>
-                    <span class={clsx(icon, 'text-6xl')} />
-                  </li>
-                ))}
-              <li>
-                <span class='text-2xl'>...</span>
-              </li>
-            </ul>
-          </section>
-        </div>
-      </section>
-      <section>
-        <h2 className='text-4xl mb-8'></h2>
-      </section>
+      <article class='oy-10'>
+        <section>
+          <h2 class='text-4xl mb-8'>About me!</h2>
+          <div class='mx-16'>
+            <blockquote class='flex items-end'>
+              <div class='border border-gray-800 rounded-3xl w-1/2 h-32 mx-auto relative'>
+                <h1 class='inline-block translate-x-1/2 absolute top-16 right-0'>
+                  CSS なんもわからん
+                </h1>
+              </div>
+              <footer>
+                ─ <cite>NPG418</cite>
+              </footer>
+            </blockquote>
+            <section class='mt-32'>
+              <h3 class='text-xl mb-4'>よく使う言語</h3>
+              <ul class='flex gap-3 flex-wrap items-end'>
+                {[
+                  'i-devicon-html',
+                  'i-devicon-css3',
+                  'i-devicon-javascript',
+                  'i-devicon-typescript',
+                  'i-devicon-python',
+                  'i-devicon-cplusplus',
+                  'i-devicon-csharp',
+                  'i-devicon-lua',
+                  'i-devicon-java',
+                  'i-devicon-kotlin',
+                ]
+                  .map((icon, i) => (
+                    <li key={i}>
+                      <span class={clsx(icon, 'text-6xl')} />
+                    </li>
+                  ))}
+                <li>
+                  <span class='text-2xl'>...</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </section>
+        <section>
+          <h2 className='text-4xl mb-8'>
+            作ったものとか
+          </h2>
+          <Card title='TSX Tabler Icons' />
+        </section>
+      </article>
     </>
   );
 }
