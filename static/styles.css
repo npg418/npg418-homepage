@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
   font-family: "Zen Kaku Gothic New", sans-serif;
+}
+
+.dark {
+  color-scheme: dark;
 }
