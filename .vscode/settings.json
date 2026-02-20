@@ -1,6 +1,8 @@
 {
   "cSpell.words": [
-    "commitlint"
+    "commitlint",
+    "linecap",
+    "linejoin"
   ],
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
