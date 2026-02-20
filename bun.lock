@@ -5,6 +5,9 @@
     "": {
       "name": "npg418-homepage",
       "dependencies": {
+        "@fontsource-variable/m-plus-1-code": "^5.2.9",
+        "@fontsource-variable/noto-sans-jp": "^5.2.10",
+        "@fontsource-variable/noto-serif-jp": "^5.2.9",
         "astro": "^5.17.1",
       },
       "devDependencies": {
@@ -124,6 +127,12 @@
     "@esbuild/win32-ia32": ["@esbuild/win32-ia32@0.27.3", "", { "os": "win32", "cpu": "ia32" }, "sha512-QLKSFeXNS8+tHW7tZpMtjlNb7HKau0QDpwm49u0vUp9y1WOF+PEzkU84y9GqYaAVW8aH8f3GcBck26jh54cX4Q=="],
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.27.3", "", { "os": "win32", "cpu": "x64" }, "sha512-4uJGhsxuptu3OcpVAzli+/gWusVGwZZHTlS63hh++ehExkVT8SgiEf7/uC/PclrPPkLhZqGgCTjd0VWLo6xMqA=="],
+
+    "@fontsource-variable/m-plus-1-code": ["@fontsource-variable/m-plus-1-code@5.2.9", "", {}, "sha512-7dk5Rjy6cY8fdoas4y5dkBQf0lCZDaahIcBf70+0B5zgqSf/vy0y7wr9KbE4iOVkSBPzzwGOtdlZLEQUH9GwrQ=="],
+
+    "@fontsource-variable/noto-sans-jp": ["@fontsource-variable/noto-sans-jp@5.2.10", "", {}, "sha512-m0XfZ38rZtCaGAuAQL0cBPQ6fc/RguYEOqw66zvuLOV9vNRUBf9MFqyoazTu2JVCRIcnkrxbwF29UUaHHgTKdg=="],
+
+    "@fontsource-variable/noto-serif-jp": ["@fontsource-variable/noto-serif-jp@5.2.9", "", {}, "sha512-FBQiejB8H0Jifs6BzC1yD32MKwdOLk63B/Dwaefauly0b36I6kL1L3a8zre7SWETP3zfe1eP0/H6DUR96jePpg=="],
 
     "@img/colour": ["@img/colour@1.0.0", "", {}, "sha512-A5P/LfWGFSl6nsckYtjw9da+19jB8hkJ6ACTGcDfEJ0aE+l2n2El7dsVM7UVHZQ9s2lmYMWlrS21YLy2IR1LUw=="],
 

@@ -1,0 +1,14 @@
+:root {
+  --primary: rgb(50, 89, 146);
+  --secondary: rgb(144, 145, 166);
+  --accent: rgb(240, 168, 92);
+  --background: rgb(255, 255, 255);
+
+  --font-sans: "Noto Sans JP Variable", sans-serif;
+  --font-serif: "Noto Serif JP Variable", serif;
+  --font-mono: "M PLUS 1 Code Variable", monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+}

@@ -10,6 +10,9 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@fontsource-variable/m-plus-1-code": "^5.2.9",
+    "@fontsource-variable/noto-sans-jp": "^5.2.10",
+    "@fontsource-variable/noto-serif-jp": "^5.2.9",
     "astro": "^5.17.1"
   },
   "devDependencies": {
