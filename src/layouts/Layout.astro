@@ -1,14 +1,15 @@
 ---
+import "@/styles/global.css";
 import "@fontsource-variable/m-plus-1-code";
 import "@fontsource-variable/noto-sans-jp";
 import "@fontsource-variable/noto-serif-jp";
-import "@/styles/global.css";
 
 import Logo from "@/assets/Logo.svg";
+import ThemeIcon from "@/components/ThemeIcon.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,9 +20,10 @@ import Logo from "@/assets/Logo.svg";
 	</head>
 	<body>
 		<header>
-			<div>
+			<nav>
 				<a href="/"><Logo width={64} height={64} /></a>
-			</div>
+				<ThemeIcon />
+			</nav>
 		</header>
 		<main>
 			<slot />
@@ -59,8 +61,10 @@ import Logo from "@/assets/Logo.svg";
 	header {
 		grid-area: header;
 
-		> div {
+		> nav {
 			display: flex;
+			align-items: center;
+			justify-content: space-between;
 			padding: 1rem;
 			margin: auto;
 		}
