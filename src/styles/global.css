@@ -10,16 +10,13 @@
     --text: rgb(255, 255, 255);
   }
 
-  --font-sans: "Noto Sans JP Variable",
-  sans-serif;
-  --font-serif: "Noto Serif JP Variable",
-  serif;
-  --font-mono: "M PLUS 1 Code Variable",
-  monospace;
+  --font-sans: "Noto Sans JP Variable", sans-serif;
+  --font-serif: "Noto Serif JP Variable", serif;
+  --font-mono: "M PLUS 1 Code Variable", monospace;
 }
 
 path {
-  color:var(--text);
+  color: var(--text);
 }
 
 *,
