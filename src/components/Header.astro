@@ -1,0 +1,25 @@
+---
+import Logo from "@/assets/Logo.svg";
+import ThemeIcon from "@/components/ThemeIcon.astro";
+---
+
+<header>
+  <nav>
+    <a href="/"><Logo width={64} height={64} /></a>
+    <ThemeIcon />
+  </nav>
+</header>
+
+<style>
+  header {
+    grid-area: header;
+
+    > nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      margin: auto;
+    }
+  }
+</style>

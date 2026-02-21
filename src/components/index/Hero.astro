@@ -1,11 +1,11 @@
 ---
 import NPG418 from "@/assets/NPG418.webp";
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 ---
 
 <div id="hero">
   <h1><span>NPG418</span><span>is</span><span>here.</span></h1>
-  <Image src={NPG418} alt="NPG418 Icon" width={400} height={400} />
+  <Image src={NPG418} alt="NPG418 Icon" width={400} height={400} priority />
 </div>
 
 <style>
