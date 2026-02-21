@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["commitlint", "fontsource", "linecap", "linejoin"],
+  "cSpell.words": [
+    "commitlint",
+    "fontsource",
+    "linecap",
+    "linejoin",
+    "withastro"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
       "file": ".github/copilot-commit-message-instructions.md"
