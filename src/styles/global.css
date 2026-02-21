@@ -3,12 +3,18 @@
   --secondary: rgb(144, 145, 166);
   --accent: rgb(240, 168, 92);
   --background: rgb(255, 255, 255);
+  --text: rgb(9, 9, 9);
+
+  @media (prefers-color-scheme: dark) {
+    --background: rgb(23,23,23);
+    --text: rgb(255, 255, 255);
+  }
 
   --font-sans: "Noto Sans JP Variable", sans-serif;
   --font-serif: "Noto Serif JP Variable", serif;
   --font-mono: "M PLUS 1 Code Variable", monospace;
 }
 
-body {
-  font-family: var(--font-sans);
+*, ::before, ::after {
+  box-sizing: border-box;
 }

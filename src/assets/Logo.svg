@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 30 60 C 80 50, 90 20, 130 40 C 160 55, 160 90, 170 160" />
+    <path d="M 30 60 C 60 62, 80 70, 95 85 C 85 110, 70 130, 60 160" />
+    <path d="M 30 60 C 60 65, 80 65, 95 75" />
+    <!-- <path d="M 100 55 Q 110 45 120 55" /> -->
+    <path d="M 135 60 C 145 75, 135 95, 110 95" />
+    <path d="M 110 95 C 130 110, 140 130, 145 160" />
+    <path d="M 110 95 C 100 120, 115 140, 125 160" />
+    <style>
+        path {
+            color: #000;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            path {
+                color: #FFF;
+            }
+        }
+    </style>
+</svg>
