@@ -14,7 +14,10 @@
     "@fontsource-variable/m-plus-1-code": "^5.2.9",
     "@fontsource-variable/noto-sans-jp": "^5.2.10",
     "@fontsource-variable/noto-serif-jp": "^5.2.9",
-    "astro": "^5.17.1"
+    "@iconify-json/line-md": "^1.2.14",
+    "@iconify-json/mdi": "^1.2.3",
+    "astro": "^5.17.1",
+    "astro-icon": "^1.1.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.2",
