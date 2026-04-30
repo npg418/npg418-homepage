@@ -14,20 +14,20 @@
     "@fontsource-variable/m-plus-1-code": "^5.2.9",
     "@fontsource-variable/noto-sans-jp": "^5.2.10",
     "@fontsource-variable/noto-serif-jp": "^5.2.9",
-    "@iconify-json/line-md": "^1.2.14",
+    "@iconify-json/line-md": "^1.2.16",
     "@iconify-json/mdi": "^1.2.3",
-    "astro": "^5.17.1",
+    "astro": "^5.18.1",
     "astro-icon": "^1.1.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.4.2",
-    "@commitlint/config-conventional": "^20.4.2",
-    "@commitlint/types": "^20.4.0",
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@commitlint/types": "^20.5.0",
     "git-format-staged": "^4.0.1",
     "husky": "^9.1.7",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-astro-organize-imports": "^0.4.11",
+    "prettier-plugin-astro-organize-imports": "^0.4.12",
     "prettier-plugin-organize-imports": "^4.3.0"
   }
 }
