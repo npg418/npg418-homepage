@@ -1,4 +1,18 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <footer>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://github.com/npg418">
+          <Icon name="mdi:github" />
+          <span>GitHub</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
   <small> Copyright &copy; 2026 NPG418. Licensed under the MIT License. </small>
 </footer>
 
@@ -8,5 +22,24 @@
 
     text-align: center;
     padding: 1rem;
+
+    nav {
+      padding: 3em;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      a {
+        color: currentColor;
+        text-decoration: none;
+
+        :hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 </style>
