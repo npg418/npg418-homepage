@@ -2,10 +2,13 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<button id="themeToggle" aria-label="テーマを切り替える">
-  <Icon name="line-md:moon-filled-to-sunny-filled-transition" class="sun" />
-  <Icon name="line-md:sunny-filled-loop-to-moon-filled-transition" class="moon" />
-</button>
+<template id="sunIcon">
+  <Icon name="line-md:moon-filled-to-sunny-filled-transition" width="2em" height="2em" />
+</template>
+<template id="moonIcon">
+  <Icon name="line-md:sunny-filled-loop-to-moon-filled-transition" width="2em" height="2em" />
+</template>
+<button id="themeToggle" aria-label="テーマを切り替える"></button>
 
 <style>
   #themeToggle {
@@ -26,10 +29,16 @@ import { Icon } from "astro-icon/components";
     return "light";
   })();
 
+  const sunIcon = document.getElementById("sunIcon")?.content;
+  const moonIcon = document.getElementById("moonIcon")?.content;
+  const themeToggle = document.getElementById("themeToggle");
+
   if (theme === "light") {
     document.documentElement.classList.remove("dark");
+    themeToggle?.appendChild(sunIcon?.cloneNode(true));
   } else {
     document.documentElement.classList.add("dark");
+    themeToggle?.appendChild(moonIcon?.cloneNode(true));
   }
 
   window.localStorage.setItem("theme", theme);
@@ -40,6 +49,8 @@ import { Icon } from "astro-icon/components";
 
     const isDark = element.classList.contains("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    themeToggle?.replaceChildren(isDark ? moonIcon?.cloneNode(true) : sunIcon?.cloneNode(true));
   };
 
   document.getElementById("themeToggle")?.addEventListener("click", handleToggleClick);
